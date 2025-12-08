@@ -1,0 +1,40 @@
+<div class="privacy-policy-container">
+    <header class="policy-header">
+      <h1>Política de Privacidad</h1>
+      <p class="last-update">Última actualización: {{ lastUpdate }}</p>
+    </header>
+  
+    <div class="policy-content">
+      <div class="intro-section">
+        <p class="welcome-text">
+          Bienvenido a {{ appName }}. Tu privacidad es importante para nosotros. 
+          Esta política describe cómo manejamos tu información al usar nuestra aplicación.
+        </p>
+      </div>
+  
+      @for (section of sections; track section.title) {
+        <section class="policy-section">
+          <h2>{{ section.title }}</h2>
+          <p>{{ section.content }}</p>
+          
+          @if (section.subsections) {
+            <ul class="subsection-list">
+              @for (subsection of section.subsections; track $index) {
+                <li>{{ subsection }}</li>
+              }
+            </ul>
+          }
+        </section>
+      }
+  
+      <div class="important-notice">
+        <h3>⚠️ Aviso Importante</h3>
+        <p>
+          Esta aplicación está diseñada para respetar completamente tu privacidad. 
+          No recopilamos, procesamos ni compartimos ningún dato personal. 
+          Puedes usar {{ appName }} con total tranquilidad.
+        </p>
+      </div>
+    </div>
+
+  </div>
