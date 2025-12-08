@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class PolicyOfProvacityComponent {
   lastUpdate: string = 'Diciembre 2024';
   appName: string = 'Radio Rey Jesus Cieneguilla';
-  contactEmail: string = 'contacto@turadio.com';
+  contactEmail: string = 'elio.antonio.654@gmail.com';
 
   sections = [
     {
